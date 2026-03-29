@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Evolvic — Next.js site
 
-## Getting Started
+Marketing site for [Evolvic](https://evolvic.com), rebuilt with the [Next.js](https://nextjs.org) App Router and [Tailwind CSS](https://tailwindcss.com) v4. Content and structure mirror the public WordPress site; visuals use a clean consulting palette (tune colors in `src/app/globals.css` to match pixel-perfect brand tokens).
 
-First, run the development server:
+## Scripts
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev    # local dev — http://localhost:3000
+npm run build  # production build
+npm run start  # run production server locally
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project layout
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/` — routes (`/`, `/about-us`, `/contact`, `/services`, `/services/[slug]`, `/careers`, `/blog`, legal placeholders)
+- `src/components/` — header, footer, FAQ, CTA, newsletter
+- `src/lib/site.ts` — phone, emails, nav, footer links
+- `src/lib/services-data.ts` — service copy from evolvic.com
+- `src/lib/faqs.ts` — homepage FAQ items
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repo to GitHub/GitLab/Bitbucket.
+2. In [Vercel](https://vercel.com/new), import the repo — framework preset **Next.js**, root `.` , build `next build`, output default.
+3. Add your production domain and point DNS per Vercel’s instructions when you cut over from WordPress.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Optional: set **Root Directory** if the app lives in a monorepo subfolder.
+
+## Notes
+
+- **Emails** in `src/lib/site.ts` are placeholders (`info@` / `talent@`); replace with your live addresses.
+- **Newsletter** form is UI-only — wire `action` to Resend, Formspree, or your API.
+- **Blog** and **Terms / Privacy** are placeholders; paste WordPress export or CMS content when ready.
+- **Partner logos** on the homepage are placeholders; add assets under `public/`.
+- **Stats** (“Years / Projects / Countries”) match odd values seen on the legacy homepage — update when you have official numbers.
