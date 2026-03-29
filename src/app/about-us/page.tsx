@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <section className="border-b border-[var(--border)] bg-[var(--surface)] py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl">
+          <h1 className="font-heading text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl">
             Our mission is to make work meaningful
           </h1>
           <p className="mt-6 text-lg text-[var(--muted)]">
@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-3xl space-y-12 px-4 sm:px-6 lg:px-8">
           <div>
-            <h2 className="font-display text-2xl font-semibold text-[var(--ink)]">
+            <h2 className="font-heading text-2xl font-semibold text-[var(--ink)]">
               Who we are
             </h2>
             <p className="mt-4 text-[var(--muted)] leading-relaxed">
@@ -37,7 +37,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-2xl font-semibold text-[var(--ink)]">
+            <h2 className="font-heading text-2xl font-semibold text-[var(--ink)]">
               Our vision
             </h2>
             <p className="mt-4 text-[var(--muted)] leading-relaxed">
@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-2xl border border-[var(--border)] bg-[var(--muted-bg)]/50 p-8">
-            <h2 className="font-display text-xl font-semibold text-[var(--ink)]">
+            <h2 className="font-heading text-xl font-semibold text-[var(--ink)]">
               From the blog
             </h2>
             <p className="mt-3 text-sm text-[var(--muted)]">

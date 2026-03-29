@@ -12,7 +12,7 @@ export default function ServicesIndexPage() {
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h1 className="font-display text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl">
+        <h1 className="font-heading text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl">
           Services
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
@@ -24,9 +24,9 @@ export default function ServicesIndexPage() {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              className="group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 transition hover:border-teal-200 hover:shadow-md"
+              className="group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 transition hover:border-[var(--evolvic-purple-soft)]/40 hover:shadow-md"
             >
-              <h2 className="font-display text-2xl font-semibold text-[var(--ink)] group-hover:text-[var(--accent-dark)]">
+              <h2 className="font-heading text-2xl font-semibold text-[var(--ink)] group-hover:text-[var(--evolvic-purple)]">
                 {s.title}
               </h2>
               <p className="mt-4 text-[var(--muted)] leading-relaxed">

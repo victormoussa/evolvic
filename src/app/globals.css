@@ -1,34 +1,65 @@
 @import "tailwindcss";
 
+/* Tokens from evolvic.com Elementor global kit (post-7.css) */
 :root {
-  --background: #fafaf9;
-  --foreground: #0c1222;
-  --ink: #0c1222;
-  --muted: #475569;
-  --muted-bg: #f1f5f9;
+  --evolvic-navy: #0a0a23;
+  --evolvic-text: #424242;
+  --evolvic-text-muted: #303030;
+  --evolvic-gold: #efc481;
+  --evolvic-purple: #6f42c1;
+  --evolvic-purple-hover: #6610f2;
+  --evolvic-purple-soft: #8264ff;
+  --evolvic-bg: #ffffff;
+  --evolvic-bg-soft: #f8f9fa;
+  --evolvic-border: #e3e3e3;
+  --evolvic-border-light: #d7d7d9;
+
+  --background: var(--evolvic-bg);
+  --foreground: var(--evolvic-text);
+  --ink: var(--evolvic-navy);
+  --muted: var(--evolvic-text);
+  --muted-bg: var(--evolvic-bg-soft);
   --surface: #ffffff;
-  --border: #e2e8f0;
-  --accent: #0d9488;
-  --accent-dark: #0f766e;
-  --header: #0b1220;
+  --border: var(--evolvic-border);
+  --accent: var(--evolvic-purple);
+  --accent-dark: var(--evolvic-purple-hover);
+  --header: var(--evolvic-bg);
+}
+
+html {
+  overflow-x: clip;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans-body), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display-family), ui-serif, Georgia, Cambria,
-    "Times New Roman", serif;
+  --font-sans: var(--font-poppins), "Poppins", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-heading: var(--font-prompt), "Prompt", ui-sans-serif, system-ui,
+    sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: -0.5px;
 }
 
-/* Focus visibility for keyboard users */
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--evolvic-purple);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

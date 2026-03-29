@@ -91,7 +91,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             <span className="px-2 text-slate-400">/</span>
             <span className="text-[var(--muted)]">{s.title}</span>
           </p>
-          <h1 className="mt-6 font-display text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl">
+          <h1 className="mt-6 font-heading text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl">
             {s.title}
           </h1>
           <p className="mt-6 text-lg text-[var(--muted)] leading-relaxed">
@@ -104,7 +104,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="mx-auto max-w-3xl space-y-16 px-4 sm:px-6 lg:px-8">
           {s.sections.map((sec) => (
             <div key={sec.heading}>
-              <h2 className="font-display text-2xl font-semibold text-[var(--ink)]">
+              <h2 className="font-heading text-2xl font-semibold text-[var(--ink)]">
                 {sec.heading}
               </h2>
               <SectionBody body={sec.body} variant={sec.variant} />

@@ -16,6 +16,7 @@ export const site = {
 
 export const nav = {
   primary: [
+    { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/about-us", label: "About Us" },
     { href: "/careers", label: "Careers" },

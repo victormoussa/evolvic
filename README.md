@@ -34,6 +34,21 @@ npm run lint
 
 **Vercel project settings** (confirm once): **Settings → Git → Production Branch** = **`main`**. All other branches (including `develop`) deploy as **Previews** by default.
 
+## Search indexing (pre-launch vs live)
+
+Until you want Google to index the site:
+
+- Do **not** set `ALLOW_INDEXING` to `true` in Vercel (omit it or leave empty).
+- The app then serves **`Disallow: /` in `/robots.txt`**, **`noindex, nofollow`** in root `metadata`, **`X-Robots-Tag: noindex, nofollow, noarchive`** via the [Next.js 16 proxy](https://nextjs.org/docs/messages/middleware-to-proxy) in [`src/proxy.ts`](src/proxy.ts), and an **empty `/sitemap.xml`**.
+
+When **evolvic.com** (or your canonical domain) is live:
+
+1. Set **`NEXT_PUBLIC_SITE_URL`** = `https://evolvic.com` (no trailing slash) for **Production** (and match **Preview** if you want accurate OG URLs in previews).
+2. Set **`ALLOW_INDEXING=true`** for the **Production** environment only in Vercel (leave Preview/Development without it so preview URLs stay non-indexable).
+3. Redeploy production. Verify `/robots.txt` allows crawling and lists the sitemap.
+
+See [`.env.example`](.env.example). Helpers live in [`src/lib/indexing.ts`](src/lib/indexing.ts).
+
 ## Deploy on Vercel
 
 1. Push this repo to GitHub/GitLab/Bitbucket.

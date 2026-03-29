@@ -9,7 +9,7 @@ export default function BlogPage() {
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="font-display text-4xl font-semibold tracking-tight text-[var(--ink)]">
+        <h1 className="font-heading text-4xl font-semibold tracking-tight text-[var(--ink)]">
           Blog
         </h1>
         <p className="mt-6 text-[var(--muted)]">
