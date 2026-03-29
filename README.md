@@ -19,13 +19,29 @@ npm run lint
 - `src/lib/services-data.ts` — service copy from evolvic.com
 - `src/lib/faqs.ts` — homepage FAQ items
 
+## Git branches and Vercel
+
+| Branch     | Purpose |
+| ---------- | ------- |
+| **`develop`** | Day-to-day work and integration. Push here (or merge PRs) for **preview** builds — Vercel gives a unique **Preview URL** per deployment (and a stable branch URL like `…-git-develop-….vercel.app`). Use that for QA. |
+| **`main`**    | **Production**. Merge `develop` → `main` when a release is ready. Vercel promotes the result to **Production** (`evolvic.vercel.app` and your custom domain). |
+
+**Typical flow**
+
+1. `git checkout develop` → make changes → `git push origin develop`
+2. Open the Preview deployment in the Vercel dashboard (or from the GitHub check) and test.
+3. When satisfied: open a PR **`develop` → `main`**, review, merge (or merge locally and push `main`).
+
+**Vercel project settings** (confirm once): **Settings → Git → Production Branch** = **`main`**. All other branches (including `develop`) deploy as **Previews** by default.
+
 ## Deploy on Vercel
 
 1. Push this repo to GitHub/GitLab/Bitbucket.
 2. In [Vercel](https://vercel.com/new), import the repo — framework preset **Next.js**, root `.` , build `next build`, output default.
-3. Add your production domain and point DNS per Vercel’s instructions when you cut over from WordPress.
+3. Set **Production Branch** to **`main`** (see above).
+4. Add your production domain and point DNS per Vercel’s instructions when you cut over from WordPress.
 
-Optional: set **Root Directory** if the app lives in a monorepo subfolder.
+Optional: set **Root Directory** if the app lives in a monorepo subfolder. In **GitHub → Settings → General → Default branch**, set **`develop`** if you want new clones and PRs to start from integration by default.
 
 ## Notes
 
