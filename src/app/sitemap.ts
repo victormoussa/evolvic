@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/careers",
     "/blog",
-    "/partners/cybercyte",
     "/terms-and-conditions",
     "/privacy-policy",
   ];
@@ -29,12 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}${path || "/"}`,
       lastModified: now,
       changeFrequency: "weekly" as const,
-      priority:
-        path === ""
-          ? 1
-          : path === "/partners/cybercyte"
-            ? 0.85
-            : 0.8,
+      priority: path === "" ? 1 : 0.8,
     })),
     ...serviceSlugs.map((slug) => ({
       url: `${base}/services/${slug}`,

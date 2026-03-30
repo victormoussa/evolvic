@@ -5,9 +5,9 @@ export function FaqSection() {
   return (
     <section id="faqs" className="scroll-mt-28 bg-[var(--evolvic-bg-soft)] py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-balance font-heading text-2xl font-bold capitalize text-[var(--evolvic-navy)] sm:text-3xl md:text-4xl">
+        <h3 className="font-heading text-2xl font-bold capitalize text-[var(--evolvic-navy)] sm:text-3xl md:text-4xl">
           Frequently Asked Questions
-        </h2>
+        </h3>
         <div className="mt-10 space-y-3">
           {faqs.map((item) => (
             <details

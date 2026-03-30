@@ -38,7 +38,6 @@ export const headerNav: HeaderNavItem[] = [
         label: "Product & Service Development",
       },
       { href: "/services/cloud-services", label: "Cloud Services" },
-      { href: "/partners/cybercyte", label: "CyberCyte & X-CTEM" },
       { href: "/services", label: "All services" },
     ],
   },
@@ -75,7 +74,6 @@ export const footer = {
   useful: [
     { href: "/about-us", label: "About Us" },
     { href: "/careers", label: "Careers" },
-    { href: "/partners/cybercyte", label: "CyberCyte partnership" },
     { href: "/terms-and-conditions", label: "Terms and Conditions" },
     { href: "/privacy-policy", label: "Privacy Policy" },
   ],

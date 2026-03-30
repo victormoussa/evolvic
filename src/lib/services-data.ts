@@ -25,7 +25,7 @@ export const serviceSummaries: Array<{
     slug: "cybersecurity-and-law",
     title: "Cybersecurity & Law",
     description:
-      "Cyber risk, privacy, and IT legal support in one engagement—strategy, implementation, and governance for teams in Canada and the United States, including continuous exposure management with partners such as CyberCyte.",
+      "We are a one-stop shop in cybersecurity and related legal matters. With our team of strategy, technology, and law experts, we can be a strategic partner and provide support to your management team and your IT department.",
   },
   {
     slug: "data-driven-growth",
@@ -52,36 +52,25 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     slug: "cybersecurity-and-law",
     title: "Cybersecurity & Law",
     intro:
-      "Evolvic helps leadership and IT teams reduce cyber risk with a single engagement that blends cybersecurity advisory, implementation support, and IT law. Based in Montreal and active across Canada and the United States, we align strategy, controls, and contracts so you can move faster without outrunning your governance obligations.",
+      "Do you want to take part in creating a digital world in which everyone feels safe? Together, we set your future strategy for cybersecurity and privacy, deal with existing security challenges of your operations, and navigate among new possibilities.",
     sections: [
       {
-        heading: "Why cyber, privacy, and legal counsel belong together",
+        heading: "Current Challenges",
         body: [
-          "Regulators, customers, and boards expect evidence of reasonable security—not just tools. That requires clear accountability across technical controls, vendor contracts, and incident response.",
-          "Evolvic works with your executives and technical owners so priorities match real business impact: data protection, supply-chain security, outsourcing, and operational resilience.",
-          "Threats are global; your obligations are local. We help you interpret requirements in context and turn them into practical roadmaps.",
+          "Virtually everything we do is touched by technology in some way. We are heavily inter-connected and networked, a fact that enhances our quality of life, but also creates vulnerabilities.",
+          "From commercial supply chains to the critical infrastructure that underpins our economy and our society, the risks in the cyber world have multiplied, accelerated, and grown increasingly malicious.",
+          "While cyber threats are global, we know that requirements vary locally and challenges are unique to each organization.",
         ],
       },
       {
-        heading: "What we offer",
+        heading: "What we Offer",
         body:
-          "We act as a strategic partner to management and IT: cybersecurity and privacy programs, control assessments, procurement and outsourcing agreements, breach readiness, and security-aware digital operations. You get coordinated advice across strategy, technology, and law instead of juggling disconnected vendors.",
+          "We are a one-stop shop in cybersecurity and related legal matters. With our team of experts in strategy, technology, and law, we can be a strategic partner and provide support to both your management team and your IT department. Together, we create a secure world where you, your employees, your customers, and your customers' customers feel safe.\n\nAt evolvic, you will get advice about data protection and privacy, cybersecurity, digital marketing, and procurement. Of course, we will also help out with IT outsourcing and contracts.",
       },
       {
-        heading: "Continuous exposure management & platform partnerships",
-        body: [
-          "Many organizations now consolidate vulnerability intelligence, misconfigurations, attack-surface data, and governance metrics into unified exposure-management programs—often discussed under continuous threat exposure management (CTEM). Done well, this reduces tool sprawl and helps teams remediate what matters first.",
-          "Evolvic combines advisory, rollout support, and legal context so you can adopt the right platform without gaps between security operations, compliance evidence, and executive reporting.",
-        ],
-        relatedLink: {
-          href: "/partners/cybercyte",
-          label: "CyberCyte X-CTEM and Evolvic in North America",
-        },
-      },
-      {
-        heading: "Who we work with",
+        heading: "Our Strengths",
         body:
-          "Growth companies and established enterprises modernizing identity, cloud, data, and SaaS footprints—especially when legal, regulatory, or customer scrutiny makes security and documentation non-negotiable.",
+          "As a digital transformation consulting firm, we help our clients deal with the digital challenges of the future in cybersecurity and IT law.",
       },
     ],
   },

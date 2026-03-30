@@ -1,76 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import { FaqSection } from "@/components/faq-section";
 import { serviceSummaries } from "@/lib/services-data";
-
-export const metadata: Metadata = {
-  title: "Secure digital transformation, cloud, data & cyber",
-  description:
-    "Modernize with Evolvic: cybersecurity and IT law, cloud and data platforms, agile product delivery, and North American programs with CyberCyte X-CTEM for unified exposure and GRC visibility.",
-  openGraph: {
-    title: "Evolvic — digital transformation with security built in",
-    description:
-      "Consulting and delivery for Canada and the United States: cyber, legal, cloud, data, and strategic vendor partnerships.",
-  },
-};
 
 export default function HomePage() {
   return (
     <>
       <section className="relative min-w-0 overflow-hidden bg-white">
-        <div className="relative mx-auto max-w-[1420px] px-4 pb-10 pt-8 sm:px-6 sm:pb-12 sm:pt-10 md:px-8 md:pt-14 lg:pb-16 lg:pt-12">
-          <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:items-center lg:gap-8 xl:gap-14">
-            <div className="min-w-0 lg:pr-2 xl:pr-4">
-              <h1 className="max-w-xl text-balance font-heading text-[clamp(1.625rem,calc(4vw + 0.5rem),3.5rem)] font-extrabold leading-[1.12] tracking-[-0.02em] text-[var(--evolvic-navy)] lg:max-w-none lg:text-[clamp(1.85rem,calc(2.2vw + 1.35rem),3.65rem)] xl:text-[clamp(2rem,calc(2vw + 1.5rem),4.1rem)]">
-                Companies that undergo digital transformation improve{" "}
-                <span className="text-[var(--evolvic-gold)]">
-                  profitability &amp; efficiency.
-                </span>
-              </h1>
+        <div className="relative mx-auto max-w-[1420px] px-4 pb-0 pt-8 sm:px-6 sm:pt-12 md:px-8 md:pt-16">
+          <h1 className="max-w-5xl text-balance font-heading text-[clamp(1.625rem,calc(4.2vw+0.5rem),5.25rem)] font-extrabold leading-[1.12] tracking-[-0.02em] text-[var(--evolvic-navy)] sm:leading-[1.15]">
+            Companies that undergo digital transformation improve{" "}
+            <span className="text-[var(--evolvic-gold)]">
+              profitability &amp; efficiency.
+            </span>
+          </h1>
 
-              <ul className="mt-6 max-w-xl list-outside list-disc space-y-2 pl-5 font-sans text-[14px] font-normal not-italic leading-relaxed tracking-[-0.5px] text-[var(--evolvic-navy)] marker:text-[var(--evolvic-navy)] sm:mt-7 sm:text-[15px] sm:leading-[1.75]">
-                <li>
-                  80% of organization that have completed digital
-                  transformation report increased profits.
-                </li>
-                <li>85% say they have increased their market share.</li>
-              </ul>
+          <ul className="mt-6 max-w-3xl list-outside list-disc space-y-2 pl-5 font-sans text-[14px] font-light italic leading-relaxed tracking-[-0.5px] text-[var(--evolvic-text)] marker:text-[var(--evolvic-purple)] sm:mt-8 sm:text-[15px] sm:leading-[2]">
+            <li>
+              80% of organization that have completed digital transformation
+              report increased profits.
+            </li>
+            <li>85% say they have increased their market share.</li>
+          </ul>
 
-              <p className="mt-5 max-w-xl text-[15px] font-normal leading-relaxed text-[var(--evolvic-text)] sm:mt-6">
-                From Montreal across North America, we align{" "}
-                <strong className="font-semibold text-[var(--evolvic-navy)]">
-                  cloud, data, and product delivery
-                </strong>{" "}
-                with{" "}
-                <strong className="font-semibold text-[var(--evolvic-navy)]">
-                  cybersecurity and IT law
-                </strong>
-                —so modernization holds up to customer due diligence, audits,
-                and real-world incidents.
-              </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-[var(--evolvic-purple)] px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[var(--evolvic-purple-hover)] sm:mt-10 sm:w-auto sm:px-8 sm:py-4"
+          >
+            Stay innovative
+          </Link>
 
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-[var(--evolvic-purple)] px-8 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-[var(--evolvic-purple-hover)] sm:mt-9 sm:w-auto sm:px-10 sm:py-4 sm:tracking-[0.18em]"
-              >
-                Stay innovative
-              </Link>
-            </div>
-
-            <div className="relative flex min-w-0 justify-center lg:justify-end">
-              <div className="relative w-full max-w-[min(100%,28rem)] lg:max-w-none lg:w-full">
-                <Image
-                  src="/images/evolvic-home-hero.png"
-                  alt="Stylized wireframe hand supporting a digital globe—representing secure global digital transformation"
-                  width={960}
-                  height={1024}
-                  sizes="(max-width: 1023px) 100vw, (max-width: 1420px) 48vw, 600px"
-                  className="h-auto w-full object-contain"
-                  priority
-                />
-              </div>
-            </div>
+          <div className="relative mt-8 w-full min-w-0 max-w-4xl sm:mt-10 md:-ml-2">
+            <Image
+              src="/images/evolvic-home-hero.png"
+              alt=""
+              width={960}
+              height={1024}
+              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 896px"
+              className="h-auto w-full object-contain"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -81,10 +50,9 @@ export default function HomePage() {
             Our Services
           </h2>
           <p className="mt-6 max-w-3xl font-sans text-[15px] font-light leading-[2] text-[var(--evolvic-text)]">
-            Four practices—cybersecurity and IT law, data-driven growth, product
-            delivery, and cloud—so you can modernize with confidence. Explore each
-            area or ask us to map them to your priorities in Canada or the United
-            States.
+            We are dedicated to helping organizations move to the cloud to become
+            more agile, Connected, and efficient through our secure and flexible
+            end to end Services.
           </p>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {serviceSummaries.map((s) => (
@@ -107,28 +75,6 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-
-          <aside className="mt-12 rounded-2xl border border-[var(--evolvic-border)] bg-[var(--evolvic-bg-soft)] p-6 sm:mt-14 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">
-            <div className="min-w-0">
-              <p className="font-heading text-xs font-bold uppercase tracking-wider text-[var(--evolvic-purple)]">
-                Strategic partner
-              </p>
-              <h3 className="mt-2 font-heading text-lg font-bold text-[var(--evolvic-navy)] sm:text-xl">
-                CyberCyte X-CTEM in North America
-              </h3>
-              <p className="mt-2 max-w-2xl text-sm font-light leading-relaxed text-[var(--evolvic-text)]">
-                Unified exposure and GRC visibility with Evolvic implementation
-                and legal context for teams adopting continuous threat exposure
-                management across Canada and the United States.
-              </p>
-            </div>
-            <Link
-              href="/partners/cybercyte"
-              className="mt-5 inline-flex shrink-0 cursor-pointer items-center justify-center rounded-lg border-2 border-[var(--evolvic-purple)] bg-white px-5 py-3 text-sm font-semibold text-[var(--evolvic-purple)] transition-colors duration-200 hover:bg-[var(--evolvic-purple)] hover:text-white sm:mt-0"
-            >
-              Learn more
-            </Link>
-          </aside>
         </div>
       </section>
 

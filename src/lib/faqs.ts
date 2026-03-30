@@ -15,12 +15,4 @@ export const faqs = [
     q: "How do you start a digital transformation?",
     a: "First you need to determine what 'digital transformation' means to your company. Assess your current capabilities, establish how you will go digital, get the right buy-in, and create a roadmap. But first, ensure you have the right skills in place. Prepare the entire business.",
   },
-  {
-    q: "What does Evolvic do differently from a typical IT services firm?",
-    a: "Evolvic combines digital transformation delivery—cloud, data, analytics, and product engineering—with cybersecurity and IT legal counsel in one engagement. That matters when audits, customer questionnaires, or regulators expect security, privacy, and contracts to align with how systems are actually built and operated.",
-  },
-  {
-    q: "What is the Evolvic and CyberCyte partnership?",
-    a: "Evolvic supports organizations in Canada and the United States in adopting CyberCyte's X-CTEM platform for unified exposure and GRC visibility. Evolvic provides regional advisory, implementation context, and legal and governance support so teams can operationalize continuous threat exposure management without fragmenting accountability.",
-  },
 ] as const;
