@@ -26,11 +26,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
-    default: "Home - Evolvic - Helping organizations move to the cloud",
+    default: "Evolvic — Secure digital transformation & cybersecurity",
     template: "%s | Evolvic",
   },
   description:
-    "Evolvic helps organizations move to the cloud to become more agile, connected, and efficient through secure, end-to-end digital transformation services.",
+    "Evolvic is a digital transformation consultancy for Canada and the United States: cybersecurity and IT law, cloud and data platforms, product delivery, and vendor programs including CyberCyte X-CTEM.",
   icons: {
     icon: "/favicon.svg",
   },

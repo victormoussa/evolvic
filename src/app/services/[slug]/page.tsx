@@ -108,6 +108,16 @@ export default async function ServiceDetailPage({ params }: Props) {
                 {sec.heading}
               </h2>
               <SectionBody body={sec.body} variant={sec.variant} />
+              {sec.relatedLink ? (
+                <p className="mt-6">
+                  <Link
+                    href={sec.relatedLink.href}
+                    className="font-medium text-[var(--accent)] underline-offset-4 transition-colors hover:underline"
+                  >
+                    {sec.relatedLink.label}
+                  </Link>
+                </p>
+              ) : null}
             </div>
           ))}
         </div>

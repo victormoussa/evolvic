@@ -14,6 +14,52 @@ export const site = {
   copyrightYear: 2026,
 } as const;
 
+export type HeaderDropdownItem = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+export type HeaderNavItem =
+  | { type: "link"; href: string; label: string }
+  | { type: "dropdown"; label: string; items: HeaderDropdownItem[] };
+
+/** Top bar: matches evolvic.com — Services + language are dropdowns on desktop. */
+export const headerNav: HeaderNavItem[] = [
+  { type: "link", href: "/", label: "Home" },
+  {
+    type: "dropdown",
+    label: "Services",
+    items: [
+      { href: "/services/cybersecurity-and-law", label: "Cybersecurity & Law" },
+      { href: "/services/data-driven-growth", label: "Data Driven Growth" },
+      {
+        href: "/services/product-service-development",
+        label: "Product & Service Development",
+      },
+      { href: "/services/cloud-services", label: "Cloud Services" },
+      { href: "/partners/cybercyte", label: "CyberCyte & X-CTEM" },
+      { href: "/services", label: "All services" },
+    ],
+  },
+  { type: "link", href: "/about-us", label: "About Us" },
+  { type: "link", href: "/careers", label: "Careers" },
+  { type: "link", href: "/contact", label: "Contact" },
+  {
+    type: "dropdown",
+    label: "English",
+    items: [
+      { href: "/", label: "English" },
+      {
+        href: "https://evolvic.com/fr/",
+        label: "Français",
+        external: true,
+      },
+    ],
+  },
+];
+
+/** Flat list for sitemaps / legacy — blog lives in footer, not top bar. */
 export const nav = {
   primary: [
     { href: "/", label: "Home" },
@@ -29,6 +75,7 @@ export const footer = {
   useful: [
     { href: "/about-us", label: "About Us" },
     { href: "/careers", label: "Careers" },
+    { href: "/partners/cybercyte", label: "CyberCyte partnership" },
     { href: "/terms-and-conditions", label: "Terms and Conditions" },
     { href: "/privacy-policy", label: "Privacy Policy" },
   ],
